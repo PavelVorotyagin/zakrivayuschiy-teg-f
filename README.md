@@ -1,2 +1,2 @@
-https://github.com/PavelVorotyagin/zakrivayuschiy-teg
-https://pavelvorotyagin.github.io/zakrivayuschiy-teg/index.html
+https://github.com/PavelVorotyagin/zakrivayuschiy-teg-f
+https://pavelvorotyagin.github.io/zakrivayuschiy-teg-f/index.html
