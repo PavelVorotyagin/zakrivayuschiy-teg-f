@@ -1,0 +1,22 @@
+:root {
+  --font-family-base: 'Inter-Variable', sans-serif;
+  --font-family-alternative: 'PressStart2P', fantasy, sans-serif;
+
+  --font-weight-card-name: 'wght' 700;
+  --font-weight-card-text: 'wght' 400;
+
+  --color-text: #000;
+  --background: #fff;
+  --strip: #fff;
+  --animation-fill-color: red;
+  --filling: var(--animation-fill-color);
+  --text-stroke-color: #fff;
+
+  --block-size: clamp(375px, 70vw, 700px);
+  --mobile-block-size: 100%;
+
+  --gradient:
+    repeating-linear-gradient(to right, #d3d3d3 0 2px, transparent 2px 4px),
+    repeating-linear-gradient(#d3d3d3 0 2px, transparent 2px 4px),
+    linear-gradient(#e7e7e7 0.01%, #1a1a1a 100%);
+}
