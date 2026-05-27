@@ -1,0 +1,23 @@
+name: Tests
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Check required project files
+        run: |
+          test -f index.html
+          test -f README.md
+          test -f styles/style.css
+          test -f styles/variables.css
+          test -f styles/animations.css
+          test -f fonts/fonts.css
