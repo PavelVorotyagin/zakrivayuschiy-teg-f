@@ -6,8 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Закрывающий тег</title>
   <link rel="stylesheet" href="./fonts/fonts.css">
-  <link rel="stylesheet" href="./styles/variables.css">
   <link rel="stylesheet" href="./styles/globals.css">
+  <link rel="stylesheet" href="./styles/variables.css">
   <link rel="stylesheet" href="./styles/style.css">
   <link rel="stylesheet" href="./styles/animations.css">
   <link rel="icon" href="./images/favicon.ico" sizes="any">
@@ -32,11 +32,12 @@
     </div>
   </header>
 
-  <main class="cards content-section">
-    <article>
+  <main>
+    <section class="cards content-section" aria-label="Карточки прогресса">
+      <article>
       <h2>Фритрек и нулевой спринт: Подготовка к работе</h2>
       <div class="watermarks">
-        <img class="filter-hue-rotate" src="./images/truck.png" alt="Базовый фургон">
+        <img class="filter-hue-rotate" src="./images/truck.png" alt="Базовый фургон" loading="lazy">
         <span class="label-img">&lt;смелость&gt;</span>
       </div>
       <div class="card-data">
@@ -64,7 +65,7 @@
     <article>
       <h2>1 спринт: Я — чистый лист</h2>
       <div class="watermarks">
-        <img class="filter-invert" src="./images/pinguin.jpg" alt="пингвин">
+        <img class="filter-invert" src="./images/pinguin.jpg" alt="пингвин" loading="lazy">
         <span class="label-img">&lt;/HTML&gt;</span>
       </div>
       <div class="card-data">
@@ -93,7 +94,7 @@
     <article>
       <h2>1 спринт: А если не получится?</h2>
       <div class="watermarks">
-        <img class="filter-saturate" src="./images/dog.jpg" alt="я за работой">
+        <img class="filter-saturate" src="./images/dog.jpg" alt="я за работой" loading="lazy">
         <span class="label-img">&lt;прорыв&gt;</span>
       </div>
       <div class="card-data">
@@ -121,7 +122,7 @@
     <article>
       <h2>2 спринт: Погоня за идеалом</h2>
       <div class="watermarks">
-        <img class="mix-filter" src="./images/skull.jpg" alt="череп">
+        <img class="mix-filter" src="./images/skull.jpg" alt="череп" loading="lazy">
         <span class="label-img">&lt;поиск&gt;</span>
       </div>
       <div class="card-data">
@@ -150,7 +151,7 @@
     <article>
       <h2>2 спринт: О тех, кто рядом</h2>
       <div class="watermarks">
-        <img class="filter-sepia" src="./images/addams.jpg" alt="семья">
+        <img class="filter-sepia" src="./images/addams.jpg" alt="семья" loading="lazy">
         <span class="label-img">&lt;поддержка&gt;</span>
       </div>
       <div class="card-data">
@@ -180,7 +181,7 @@
     <article>
       <h2>3 спринт: Обходные стратегии</h2>
       <div class="watermarks">
-        <img class="filter-opacity" src="./images/eyes.jpg" alt="глазки">
+        <img class="filter-opacity" src="./images/eyes.jpg" alt="глазки" loading="lazy">
         <span class="label-img">&lt;упорство&gt;</span>
       </div>
       <div class="card-data">
@@ -208,7 +209,7 @@
     <article>
       <h2>3 спринт: Когда опускаются руки</h2>
       <div class="watermarks">
-        <img class="filter-contrast" src="./images/motivation.jpg" alt="мотивация">
+        <img class="filter-contrast" src="./images/motivation.jpg" alt="мотивация" loading="lazy">
         <span class="label-img">&lt;фокус&gt;</span>
       </div>
       <div class="card-data">
@@ -237,7 +238,7 @@
     <article>
       <h2>«Сейчас я здесь»</h2>
       <div class="watermarks">
-        <img class="filter-sepia" src="./images/final-card.gif" alt="неоновая поездка по ночному городу">
+        <img class="filter-final-glow" src="./images/final-card.gif" alt="неоновая поездка по ночному городу" loading="lazy">
         <span class="label-img">&lt;рост&gt;</span>
       </div>
       <div class="card-data">
@@ -262,28 +263,32 @@
           </button>
         </div>
       </div>
-    </article>
+      </article>
+    </section>
   </main>
 
-  <button class="save-button button-animation" type="button" onclick="window['save'].showModal();" aria-controls="save">
-    <svg class="floppy" viewBox="0 0 21 21" aria-hidden="true">
-      <use href="#floppy"></use>
-    </svg>
-    <span class="button__text">Сохранить на&nbsp;память</span>
-  </button>
-
-  <dialog id="save">
-    <div class="dialog-content">
-      <svg class="dialog-floppy" viewBox="0 0 21 21" aria-hidden="true">
+  <footer class="footer content-section">
+    <button id="save-open-button" class="save-button button-animation" type="button" aria-controls="save">
+      <svg class="floppy" viewBox="0 0 21 21" aria-hidden="true">
         <use href="#floppy"></use>
       </svg>
-      <h2 class="dialog-text">Вставьте дискету, чтобы продолжить</h2>
-    </div>
-    <button class="close button-animation" type="button" onclick="window['save'].close();">
-      <span class="button__text">OK</span>
+      <span class="button__text">Сохранить на&nbsp;память</span>
     </button>
-  </dialog>
 
+    <dialog id="save">
+      <div class="dialog-content">
+        <svg class="dialog-floppy" viewBox="0 0 21 21" aria-hidden="true">
+          <use href="#floppy"></use>
+        </svg>
+        <h2 class="dialog-text">Вставьте дискету, чтобы продолжить</h2>
+      </div>
+      <button id="save-close-button" class="close button-animation" type="button">
+        <span class="button__text">OK</span>
+      </button>
+    </dialog>
+  </footer>
+
+  <script src="./scripts/dialog.js"></script>
   <script src="./scripts/like.js"></script>
 </body>
 

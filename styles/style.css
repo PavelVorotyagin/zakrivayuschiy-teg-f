@@ -6,6 +6,7 @@
   align-items: center;
   font-family: var(--font-family-main);
   font-variation-settings: "wght" var(--main-font-weight), "slnt" 0;
+  background-color: var(--theme-background);
   background-image: var(--grid-background);
   background-size: cover;
   background-attachment: fixed;
@@ -163,11 +164,15 @@ img {
   justify-content: center;
   align-items: center;
   gap: 8px;
-  margin: 50px auto 100px;
+  margin: 50px auto 0;
   width: 335px;
   min-height: 55px;
   background-color: var(--theme-background);
   border: 2px solid var(--accent-color);
+}
+
+.footer {
+  margin-block-end: 100px;
 }
 
 .save-button .button__text {
@@ -175,6 +180,7 @@ img {
 }
 
 dialog {
+  display: none;
   color: var(--accent-color);
   background: var(--theme-background);
   border: 2px solid var(--accent-color);
@@ -182,6 +188,10 @@ dialog {
   padding: 30px;
   inset: 0;
   transition: opacity 0.3s ease-in-out;
+}
+
+dialog[open] {
+  display: block;
 }
 
 .dialog-content {
@@ -239,9 +249,13 @@ dialog::backdrop {
   filter: sepia(100%);
 }
 
+.filter-final-glow {
+  filter: sepia(55%) saturate(130%) hue-rotate(-18deg);
+}
+
 .filter-invert {
   filter: invert(0.7);
-  transition: 0.5s linear;
+  transition: filter 0.5s linear;
 }
 
 .filter-invert:hover {
@@ -302,7 +316,11 @@ dialog::backdrop {
     gap: 8px;
     width: 306px;
     min-height: 84px;
-    margin-bottom: 103px;
+    margin-bottom: 0;
+  }
+
+  .footer {
+    margin-block-end: 103px;
   }
 
   .floppy {
