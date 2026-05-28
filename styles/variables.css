@@ -1,22 +1,28 @@
 :root {
-  --font-family-base: 'Inter-Variable', sans-serif;
-  --font-family-alternative: 'PressStart2P', fantasy, sans-serif;
+  --font-family-main: 'Inter-Variable', sans-serif;
+  --font-family-accent: 'PressStart2P', fantasy, sans-serif;
 
-  --font-weight-card-name: 'wght' 700;
-  --font-weight-card-text: 'wght' 400;
+  --main-font-title-weight: 700;
+  --main-font-weight: 400;
 
-  --color-text: #000;
-  --background: #fff;
-  --strip: #fff;
+  --accent-color: #000;
+  --theme-background: #fff;
+  --button-difference-text-color: #fff;
+  --contour-color: #000;
+  --core-color: transparent;
+  --main-body-color: transparent;
   --animation-fill-color: red;
-  --filling: var(--animation-fill-color);
+  --liked-color: #ff0000;
+  --sparks-opacity: 0;
   --text-stroke-color: #fff;
 
-  --block-size: clamp(375px, 70vw, 700px);
+  --block-size: clamp(375px, 260.5634px + 30.5164vw, 700px);
   --mobile-block-size: 100%;
 
-  --gradient:
+  --grid-background:
     repeating-linear-gradient(to right, #d3d3d3 0 2px, transparent 2px 4px),
-    repeating-linear-gradient(#d3d3d3 0 2px, transparent 2px 4px),
+    repeating-linear-gradient(to bottom, #d3d3d3 0 2px, transparent 2px 4px),
     linear-gradient(#e7e7e7 0.01%, #1a1a1a 100%);
+
+  /* Backward-compatible aliases for already used styles */
 }
