@@ -14,7 +14,7 @@
 }
 
 .content-section {
-  width: var(--block-size);
+  width: var(--block-size, 700px);
 }
 
 .header {
